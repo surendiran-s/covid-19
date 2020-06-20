@@ -7,6 +7,7 @@ $(document).ready(function(){
         var total_active, total_recovered, total_deaths, total_confirmed
 
         var state = []
+        var active = []
         var confirmed = []
         var recovered = []
         var deaths = []
@@ -15,6 +16,7 @@ $(document).ready(function(){
         $.each(data.statewise,function(id,obj){
             state.push(obj.state)
             confirmed.push(obj.confirmed)
+            active.push(obj.active)
             recovered.push(obj.recovered)
             deaths.push(obj.deaths)
         })
@@ -23,6 +25,7 @@ $(document).ready(function(){
 
         state.shift()
         confirmed.shift()
+        active.shift()
         recovered.shift()
         deaths.shift()
 
